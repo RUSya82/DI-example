@@ -1,8 +1,13 @@
-import {Logger} from "./src/logger";
-import {Service} from "./src/service";
+import {Container} from "./src/container";
 import {Controller} from "./src/controller";
 
-const logger = new Logger();
-const service = new Service(logger);
-const controller = new Controller(service);
+
+const container = new Container();
+
+const controller = container.resolve(Controller);
+const controller2 = container.resolve(Controller);
+const controller3 = container.resolve(Controller);
+
 controller.start()
+controller2.start()
+controller3.start()
