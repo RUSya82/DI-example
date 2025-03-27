@@ -1,10 +1,9 @@
-import {container} from "./container";
-import {IService} from "./interfaces/service.inreface";
+import {Service} from "./service";
+import {Injectable} from "./decorators/injectable";
 
+@Injectable()
 export class Controller{
-    private service: IService;
-    constructor() {
-        this.service = container.resolve('service');
+    constructor(private service: Service) {
     }
     start(){
         this.service.serviceLog();

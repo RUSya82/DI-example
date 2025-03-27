@@ -1,5 +1,7 @@
 import {ILogger} from "./interfaces/logger.interface";
+import {Injectable} from "./decorators/injectable";
 
+@Injectable()
 export class Logger implements ILogger{
     log(message: string){
         console.log(`[LOG] - ${message}`)
