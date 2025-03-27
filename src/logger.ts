@@ -1,8 +1,14 @@
 import {ILogger} from "./interfaces/logger.interface";
 import {Injectable} from "./decorators/injectable";
+import {Scopes} from "./types/scopes.enum";
 
-@Injectable()
+@Injectable({scope: Scopes.SINGLETONE})
 export class Logger implements ILogger{
+    static counter = 0;
+    constructor() {
+        Logger.counter++;
+        console.log(`Logger counter: ${Logger.counter}`);
+    }
     log(message: string){
         console.log(`[LOG] - ${message}`)
     }
