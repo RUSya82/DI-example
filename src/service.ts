@@ -1,12 +1,16 @@
-import {Logger} from "./logger";
 import {container} from "./container";
+import {ILogger} from "./interfaces/logger.interface";
+import {IService} from "./interfaces/service.inreface";
 
-export class Service {
-    private logger: Logger;
+export class Service implements IService{
+    private logger: ILogger;
     constructor() {
         this.logger = container.resolve('logger');
     }
-    getAll(){
-        this.logger.log(`method log from service`)
+    serviceLog(){
+        this.logger.log(`LOG log from service`)
+    }
+    serviceWarn(){
+        this.logger.warn('WARN from service')
     }
 }
