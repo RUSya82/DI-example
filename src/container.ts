@@ -1,10 +1,5 @@
-export class Container {
+class Container {
     private providers = new Map();
-
-    // register(provider: any){
-    //     this.providers.set(provider.name, provider);
-    // }
-
     resolve(provider: any){
         // Если нет метадаты Injectable - ошибка
         if(!Reflect.getMetadata('injectable', provider)){
@@ -22,3 +17,4 @@ export class Container {
         return instance;
     }
 }
+export const container = new Container();

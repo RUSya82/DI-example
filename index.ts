@@ -1,7 +1,7 @@
-import {Container} from "./src/container";
+import { container} from "./src/container";
 import {Controller} from "./src/controller";
 
-const container = new Container();
+// const container = new Container();
 
 const controller = container.resolve(Controller)
 
