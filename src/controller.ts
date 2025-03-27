@@ -1,7 +1,9 @@
 import {Service} from "./service";
 
 export class Controller{
-    constructor(private service: Service) {
+    private service: Service;
+    constructor() {
+        this.service = new Service();
     }
     start(){
         this.service.getAll();

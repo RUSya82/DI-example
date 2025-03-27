@@ -1,7 +1,9 @@
 import {Logger} from "./logger";
 
 export class Service {
-    constructor(private logger: Logger) {
+    private logger: Logger;
+    constructor() {
+        this.logger = new Logger();
     }
     getAll(){
         this.logger.log(`method log from service`)
