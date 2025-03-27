@@ -10,10 +10,8 @@ export class Service implements IService{
         Service.counter++;
         this.logger.log(`Service counter: ${Service.counter}`)
     }
-    serviceLog(){
-        this.logger.log(`LOG log from service`)
-    }
-    serviceWarn(){
-        this.logger.warn('WARN from service')
+
+    getAll() {
+        this.logger.log(`method log from service`)
     }
 }
