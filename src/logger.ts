@@ -7,7 +7,7 @@ export class Logger implements ILogger{
     static counter = 0;
     constructor() {
         Logger.counter++;
-        console.log(`Logger counter: ${Logger.counter}`);
+        this.log(`Logger counter: ${Logger.counter}`);
     }
     log(message: string){
         console.log(`[LOG] - ${message}`)

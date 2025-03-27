@@ -8,7 +8,7 @@ export class Service implements IService{
     static counter = 0;
     constructor(private logger: Logger) {
         Service.counter++;
-        console.log(`Service counter: ${Service.counter}`)
+        this.logger.log(`Service counter: ${Service.counter}`)
     }
     serviceLog(){
         this.logger.log(`LOG log from service`)
