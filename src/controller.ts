@@ -3,7 +3,7 @@ import {Injectable} from "./decorators/injectable";
 import {Scopes} from "./types/scopes.enum";
 import {Logger} from "./logger";
 
-@Injectable({scope: Scopes.TRANSIENT})
+@Injectable({scope: Scopes.SINGLETONE})
 export class Controller{
     static counter = 0;
     constructor(private service: Service, private logger: Logger) {

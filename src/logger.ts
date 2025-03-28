@@ -2,7 +2,7 @@ import {ILogger} from "./interfaces/logger.interface";
 import {Injectable} from "./decorators/injectable";
 import {Scopes} from "./types/scopes.enum";
 
-@Injectable({scope: Scopes.SINGLETONE})
+@Injectable({scope: Scopes.TRANSIENT})
 export class Logger implements ILogger{
     static counter = 0;
     constructor() {
